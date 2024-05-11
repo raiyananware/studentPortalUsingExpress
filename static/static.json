@@ -1,0 +1,9 @@
+{
+    "PORT":3000,
+    "host": "localhost",
+    "user": "root",
+    "password": "root",
+    "database": "nodejsPortal",
+    "saltRounds":10,
+    "jwtSecret":"studentPortal"
+}
