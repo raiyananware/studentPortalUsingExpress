@@ -1,5 +1,5 @@
-const db = require("../../static/db.js");
-const saltRounds = require("../../static/static.json").saltRounds;
+const db = require("../../../static/db.js");
+const saltRounds = require("../../../static/static.json").saltRounds;
 const bcrypt = require("bcrypt");
 
 const encryptPassword = async (password) => {
@@ -12,7 +12,7 @@ const encryptPassword = async (password) => {
 };
 
 const createUser = async (req, res) => {
-  if (req.user.admin == 1) {
+  if (req.user.is_superuser == 1) {
     const body = req.body;
     const getUser = await db.query(
       `select * from user where username='${body.email}'`,
