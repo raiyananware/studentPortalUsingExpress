@@ -22,8 +22,8 @@ const createUser = async (req, res) => {
 
       if (!encryptedPassword.error) {
         try {
-          await db.query(`INSERT INTO user (password, username, email, first_name, last_name, mobileNumber, is_superuser, is_staff, is_active) VALUES 
-            ('${encryptedPassword}', '${body.email}', '${body.email}', '${body.firstName}', '${body.lastName}', ${body.mobileNumber}, ${body.admin}, ${body.teacher}, 1);`);
+          await db.query(`INSERT INTO user (password, username, email, first_name, last_name, mobileNumber, is_superuser, is_staff, is_active, dob, gender) VALUES 
+            ('${encryptedPassword}', '${body.email}', '${body.email}', '${body.firstName}', '${body.lastName}', ${body.mobileNumber}, ${body.admin}, ${body.teacher}, 1, '${body.dob}', ${body.gender});`);
           res.status(201).json({ msg: "User Created Successfully" });
         } catch (error) {
           console.log(error);
@@ -36,7 +36,9 @@ const createUser = async (req, res) => {
       res.status(400).json({ msg: "User with this Email Exist" });
     }
   } else {
-    res.status(401).json({msg:"User is not authorized for creating another User"});
+    res
+      .status(401)
+      .json({ msg: "User is not authorized for creating another User" });
   }
 };
 

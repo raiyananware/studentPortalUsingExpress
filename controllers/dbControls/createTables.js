@@ -37,29 +37,27 @@ const creatingUserTable =`CREATE TABLE IF NOT EXISTS User (
 );`
 
 const creatingQualificationTable =`CREATE TABLE IF NOT EXISTS qualification (
-    studentID INT,
+    studentID INT unique,
     highestQualification VARCHAR(20) NOT NULL,
     university VARCHAR(50) NOT NULL,
     yearOfPassing INT NOT NULL,
     score DECIMAL(10,2) NOT NULL,
-    PRIMARY KEY (studentID),
     FOREIGN KEY (studentID) REFERENCES User(id) ON DELETE CASCADE
 );`
 
 const creatingWorkingDetailsTable =`CREATE TABLE IF NOT EXISTS workingDetails (
-    studentID INT,
+    studentID INT unique,
     fresher BOOLEAN DEFAULT TRUE,
     working BOOLEAN DEFAULT FALSE,
     companyName VARCHAR(20),
     designation VARCHAR(20),
     startDate DATE,
     lastDate DATE,
-    PRIMARY KEY (studentID),
     FOREIGN KEY (studentID) REFERENCES User(id)  ON DELETE CASCADE
 );`
 
 const creatingJobLocationAvailableTable =`CREATE TABLE IF NOT EXISTS jobLocationAvailable (
-    location VARCHAR(20) PRIMARY KEY
+    location VARCHAR(20)
 );`
 
 const creatingQualificationAvailableTable =`CREATE TABLE IF NOT EXISTS qualificationAvailable (

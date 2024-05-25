@@ -18,7 +18,7 @@ const activateUser = async (req, res) => {
     }
   } else {
     res.status(401).json({
-      msg: "You don't hove the permission to activate or deactivate User",
+      msg: "You don't have the permission to activate or deactivate User",
     });
   }
 };

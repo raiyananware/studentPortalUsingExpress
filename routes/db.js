@@ -10,16 +10,20 @@ const {createLecture}= require("../controllers/dbControls/lectures/createLecture
 const {createQualification}= require("../controllers/dbControls/qualification/createQualifications.js")
 const {getQualification}= require("../controllers/dbControls/qualification/getQualification.js")
 const {authenticateToken}= require("../commonFunction/decryptJwt.js")
+const {createAdmin} = require("../controllers/dbControls/createAdmin.js")
+const {addJobLocations}= require("../controllers/dbControls/jobLocation/createJobLocations.js")
 
-router.route("/createTables").post(authenticateToken,createTable);
-router.route("/topics").post(authenticateToken,createTopics);
-router.route("/topics").get(authenticateToken,getTopics)
-router.route("/subTopics").post(authenticateToken,createSubTopics)
-router.route("/subTopics").get(authenticateToken,getSubTopics)
-router.route("/lectures").post(authenticateToken,createLecture)
-router.route("/lectures").get(authenticateToken,getLectures)
-router.route("/qualificationAvailable").post(authenticateToken,createQualification)
-router.route("/qualificationAvailable").get(authenticateToken,getQualification)
+router.route("/createTables").post(createTable);
+router.route("/topics").post(createTopics);
+router.route("/topics").get(getTopics)
+router.route("/subTopics").post(createSubTopics)
+router.route("/subTopics").get(getSubTopics)
+router.route("/lectures").post(createLecture)
+router.route("/lectures").get(getLectures)
+router.route("/qualificationAvailable").post(createQualification)
+router.route("/qualificationAvailable").get(getQualification)
+router.route("/createAdmin").post(createAdmin)
+router.route("/addJobLocationAvailable").post(addJobLocations)
 
 
 module.exports = router;
