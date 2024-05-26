@@ -1,19 +1,21 @@
 const db =require("../../../../static/db.js")
 
-const createLecturesForSubTopic10053 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const topicId=1006
+
+const createLecturesForSubTopic10053 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Introduction', ${topicIds}),
-      ('Java Features', ${topicIds}),
-      ('Java Virtual Machine - Architecture, Compiled vs Interpreted', ${topicIds}),
-      ('Languages, Bytecode and Object', ${topicIds}),
-      ('Java Installation', ${topicIds}),
-      ('Basic Concepts of OOPs', ${topicIds}),
-      ('First Java Program', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Introduction', ${subTopicId}, ${topicId}),
+      ('Java Features', ${subTopicId}, ${topicId}),
+      ('Java Virtual Machine - Architecture, Compiled vs Interpreted', ${subTopicId}, ${topicId}),
+      ('Languages, Bytecode and Object', ${subTopicId}, ${topicId}),
+      ('Java Installation', ${subTopicId}, ${topicId}),
+      ('Basic Concepts of OOPs', ${subTopicId}, ${topicId}),
+      ('First Java Program', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -25,21 +27,21 @@ const createLecturesForSubTopic10053 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10054 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10054 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Data Types', ${topicIds}),
-      ('Type Casting', ${topicIds}),
-      ('Variables', ${topicIds}),
-      ('Constants', ${topicIds}),
-      ('Comments', ${topicIds}),
-      ('Command Line Arguments', ${topicIds}),
-      ('Identifiers', ${topicIds}),
-      ('Literals', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Data Types', ${subTopicId}, ${topicId}),
+      ('Type Casting', ${subTopicId}, ${topicId}),
+      ('Variables', ${subTopicId}, ${topicId}),
+      ('Constants', ${subTopicId}, ${topicId}),
+      ('Comments', ${subTopicId}, ${topicId}),
+      ('Command Line Arguments', ${subTopicId}, ${topicId}),
+      ('Identifiers', ${subTopicId}, ${topicId}),
+      ('Literals', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -51,22 +53,22 @@ const createLecturesForSubTopic10054 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10055 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10055 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Arithmetic Operators', ${topicIds}),
-      ('Relational Operators', ${topicIds}),
-      ('Bitwise Operators', ${topicIds}),
-      ('Logical Operators', ${topicIds}),
-      ('Ternary Operator', ${topicIds}),
-      ('Assignment Operators', ${topicIds}),
-      ('Unary Operator', ${topicIds}),
-      ('Operator Precedence in Java', ${topicIds}),
-      ('Assignment', ${topicIds});
+      ('Arithmetic Operators', ${subTopicId}, ${topicId}),
+      ('Relational Operators', ${subTopicId}, ${topicId}),
+      ('Bitwise Operators', ${subTopicId}, ${topicId}),
+      ('Logical Operators', ${subTopicId}, ${topicId}),
+      ('Ternary Operator', ${subTopicId}, ${topicId}),
+      ('Assignment Operators', ${subTopicId}, ${topicId}),
+      ('Unary Operator', ${subTopicId}, ${topicId}),
+      ('Operator Precedence in Java', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});
   `;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -78,23 +80,23 @@ const createLecturesForSubTopic10055 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10056 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10056 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('if statement', ${topicIds}),
-      ('if...else statement', ${topicIds}),
-      ('Nested if...else statement', ${topicIds}),
-      ('switch statement', ${topicIds}),
-      ('Assignment', ${topicIds}),
-      ('for loop', ${topicIds}),
-      ('while loop', ${topicIds}),
-      ('do...while loop', ${topicIds}),
-      ('Use of break and continue', ${topicIds}),
-      ('Logical Programs', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('if statement', ${subTopicId}, ${topicId}),
+      ('if...else statement', ${subTopicId}, ${topicId}),
+      ('Nested if...else statement', ${subTopicId}, ${topicId}),
+      ('switch statement', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId}),
+      ('for loop', ${subTopicId}, ${topicId}),
+      ('while loop', ${subTopicId}, ${topicId}),
+      ('do...while loop', ${subTopicId}, ${topicId}),
+      ('Use of break and continue', ${subTopicId}, ${topicId}),
+      ('Logical Programs', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -106,18 +108,18 @@ const createLecturesForSubTopic10056 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10057 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10057 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Declaring and Initializing an Array', ${topicIds}),
-      ('Accessing Array elements', ${topicIds}),
-      ('Iterating over Array', ${topicIds}),
-      ('Multidimensional Array', ${topicIds}),
-      ('Logical Programs using Array', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Declaring and Initializing an Array', ${subTopicId}, ${topicId}),
+      ('Accessing Array elements', ${subTopicId}, ${topicId}),
+      ('Iterating over Array', ${subTopicId}, ${topicId}),
+      ('Multidimensional Array', ${subTopicId}, ${topicId}),
+      ('Logical Programs using Array', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -129,13 +131,13 @@ const createLecturesForSubTopic10057 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10058 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10058 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Simulator to WordScapes on Play Store', ${topicIds});`;
+      ('Simulator to WordScapes on Play Store', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -147,22 +149,22 @@ const createLecturesForSubTopic10058 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10059 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10059 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Classes & Object', ${topicIds}),
-      ('Methods - Passing parameters to methods, return type', ${topicIds}),
-      ('Object as parameters, Constructors & Destructor, var-args', ${topicIds}),
-      ('Access & Non-Access Modifiers', ${topicIds}),
-      ('Dynamic memory allocation, Garbage collection and finalize()', ${topicIds}),
-      ('Assignment', ${topicIds}),
-      ('Packages and Class Hierarchy', ${topicIds}),
-      ('Object Class, Import statement, Built-in packages, User defined packages', ${topicIds}),
-      ('Nested & Anonymous Class', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Classes & Object', ${subTopicId}, ${topicId}),
+      ('Methods - Passing parameters to methods, return type', ${subTopicId}, ${topicId}),
+      ('Object as parameters, Constructors & Destructor, var-args', ${subTopicId}, ${topicId}),
+      ('Access & Non-Access Modifiers', ${subTopicId}, ${topicId}),
+      ('Dynamic memory allocation, Garbage collection and finalize()', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId}),
+      ('Packages and Class Hierarchy', ${subTopicId}, ${topicId}),
+      ('Object Class, Import statement, Built-in packages, User defined packages', ${subTopicId}, ${topicId}),
+      ('Nested & Anonymous Class', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -174,23 +176,23 @@ const createLecturesForSubTopic10059 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10060 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10060 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('What is Inheritance?', ${topicIds}),
-      ('Types of Inheritance', ${topicIds}),
-      ('Why we use Inheritance', ${topicIds}),
-      ('Method Overriding', ${topicIds}),
-      ('Method Overloading', ${topicIds}),
-      ('Assignment', ${topicIds}),
-      ('Abstract Classes', ${topicIds}),
-      ('Interfaces', ${topicIds}),
-      ('Polymorphism', ${topicIds}),
-      ('default, static and private methods in interface', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('What is Inheritance?', ${subTopicId}, ${topicId}),
+      ('Types of Inheritance', ${subTopicId}, ${topicId}),
+      ('Why we use Inheritance', ${subTopicId}, ${topicId}),
+      ('Method Overriding', ${subTopicId}, ${topicId}),
+      ('Method Overloading', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId}),
+      ('Abstract Classes', ${subTopicId}, ${topicId}),
+      ('Interfaces', ${subTopicId}, ${topicId}),
+      ('Polymorphism', ${subTopicId}, ${topicId}),
+      ('default, static and private methods in interface', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -202,20 +204,20 @@ const createLecturesForSubTopic10060 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10061 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10061 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Various ways to create String in Java', ${topicIds}),
-      ('In-built String functions', ${topicIds}),
-      ('StringBuffer', ${topicIds}),
-      ('StringBuilder', ${topicIds}),
-      ('Assignment', ${topicIds}),
-      ('Difference between String, StringBuffer & StringBuilder', ${topicIds}),
-      ('Logical Programs on Strings', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Various ways to create String in Java', ${subTopicId}, ${topicId}),
+      ('In-built String functions', ${subTopicId}, ${topicId}),
+      ('StringBuffer', ${subTopicId}, ${topicId}),
+      ('StringBuilder', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId}),
+      ('Difference between String, StringBuffer & StringBuilder', ${subTopicId}, ${topicId}),
+      ('Logical Programs on Strings', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -227,18 +229,18 @@ const createLecturesForSubTopic10061 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10062 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10062 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('What is Exception and Handling an Exception', ${topicIds}),
-      ('Compile time errors & Run time errors', ${topicIds}),
-      ('try...catch...finally', ${topicIds}),
-      ('throw & throws keywords', ${topicIds}),
-      ('User Defined Exception', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('What is Exception and Handling an Exception', ${subTopicId}, ${topicId}),
+      ('Compile time errors & Run time errors', ${subTopicId}, ${topicId}),
+      ('try...catch...finally', ${subTopicId}, ${topicId}),
+      ('throw & throws keywords', ${subTopicId}, ${topicId}),
+      ('User Defined Exception', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -250,19 +252,19 @@ const createLecturesForSubTopic10062 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10063 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10063 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('FileInputStream & FileOutputStream', ${topicIds}),
-      ('FileReader & FileWriter', ${topicIds}),
-      ('Serialization', ${topicIds}),
-      ('Object serialization, transient', ${topicIds}),
-      ('Wrapper Classes', ${topicIds}),
-      ('Autoboxing and Unboxing', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('FileInputStream & FileOutputStream', ${subTopicId}, ${topicId}),
+      ('FileReader & FileWriter', ${subTopicId}, ${topicId}),
+      ('Serialization', ${subTopicId}, ${topicId}),
+      ('Object serialization, transient', ${subTopicId}, ${topicId}),
+      ('Wrapper Classes', ${subTopicId}, ${topicId}),
+      ('Autoboxing and Unboxing', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -274,25 +276,25 @@ const createLecturesForSubTopic10063 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10064 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10064 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Introduction to Collection', ${topicIds}),
-      ('Collection Hierarchy', ${topicIds}),
-      ('Working with ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet, Queue, Dequeue, Stack', ${topicIds}),
-      ('Maps - HashMap, LinkedHashMap, TreeMap', ${topicIds}),
-      ('Using Iterators and Enumerations, ListIterator, forEach()', ${topicIds}),
-      ('Assignment', ${topicIds}),
-      ('Generics', ${topicIds}),
-      ('Comparable and Comparators', ${topicIds}),
-      ('Functional Interfaces - Lambda Expressions', ${topicIds}),
-      ('forEach() method in Iterable Interface', ${topicIds}),
-      ('Streams - Sequential, Parallel', ${topicIds}),
-      ('Filtering Collections', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Introduction to Collection', ${subTopicId}, ${topicId}),
+      ('Collection Hierarchy', ${subTopicId}, ${topicId}),
+      ('Working with ArrayList, LinkedList, HashSet, LinkedHashSet, TreeSet, Queue, Dequeue, Stack', ${subTopicId}, ${topicId}),
+      ('Maps - HashMap, LinkedHashMap, TreeMap', ${subTopicId}, ${topicId}),
+      ('Using Iterators and Enumerations, ListIterator, forEach()', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId}),
+      ('Generics', ${subTopicId}, ${topicId}),
+      ('Comparable and Comparators', ${subTopicId}, ${topicId}),
+      ('Functional Interfaces - Lambda Expressions', ${subTopicId}, ${topicId}),
+      ('forEach() method in Iterable Interface', ${subTopicId}, ${topicId}),
+      ('Streams - Sequential, Parallel', ${subTopicId}, ${topicId}),
+      ('Filtering Collections', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -304,13 +306,13 @@ const createLecturesForSubTopic10064 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10065 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10065 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Word count and writing the word count to different file', ${topicIds});`;
+      ('Word count and writing the word count to different file', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -322,18 +324,18 @@ const createLecturesForSubTopic10065 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10066 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10066 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Introduction Multi-Threading', ${topicIds}),
-      ('Thread Life Cycle', ${topicIds}),
-      ('Thread Class vs Runnable Interface', ${topicIds}),
-      ('Synchronized Methods, Block', ${topicIds}),
-      ('Daemon Thread', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Introduction Multi-Threading', ${subTopicId}, ${topicId}),
+      ('Thread Life Cycle', ${subTopicId}, ${topicId}),
+      ('Thread Class vs Runnable Interface', ${subTopicId}, ${topicId}),
+      ('Synchronized Methods, Block', ${subTopicId}, ${topicId}),
+      ('Daemon Thread', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -345,17 +347,17 @@ const createLecturesForSubTopic10066 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10067 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10067 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Java Time API', ${topicIds}),
-      ('Project on Stop Watch', ${topicIds}),
-      ('Java Http Client API', ${topicIds}),
-      ('Project on Currency Convertor', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Java Time API', ${subTopicId}, ${topicId}),
+      ('Project on Stop Watch', ${subTopicId}, ${topicId}),
+      ('Java Http Client API', ${subTopicId}, ${topicId}),
+      ('Project on Currency Convertor', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -367,17 +369,17 @@ const createLecturesForSubTopic10067 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10068 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10068 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('IoC Container', ${topicIds}),
-      ('Beans Overview', ${topicIds}),
-      ('Dependency Injection', ${topicIds}),
-      ('Aspect Oriented Programming (AOP)', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('IoC Container', ${subTopicId}, ${topicId}),
+      ('Beans Overview', ${subTopicId}, ${topicId}),
+      ('Dependency Injection', ${subTopicId}, ${topicId}),
+      ('Aspect Oriented Programming (AOP)', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -389,22 +391,22 @@ const createLecturesForSubTopic10068 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10069 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10069 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Spring MVC', ${topicIds}),
-      ('Request-Response Life Cycle', ${topicIds}),
-      ('Terminologies & Pre-requisites', ${topicIds}),
-      ('Tools', ${topicIds}),
-      ('Components of Spring MVC', ${topicIds}),
-      ('Basics of Maven', ${topicIds}),
-      ('Create a Project in Maven', ${topicIds}),
-      ('Create jar package file using Maven Command', ${topicIds}),
-      ('Maven Commands', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Spring MVC', ${subTopicId}, ${topicId}),
+      ('Request-Response Life Cycle', ${subTopicId}, ${topicId}),
+      ('Terminologies & Pre-requisites', ${subTopicId}, ${topicId}),
+      ('Tools', ${subTopicId}, ${topicId}),
+      ('Components of Spring MVC', ${subTopicId}, ${topicId}),
+      ('Basics of Maven', ${subTopicId}, ${topicId}),
+      ('Create a Project in Maven', ${subTopicId}, ${topicId}),
+      ('Create jar package file using Maven Command', ${subTopicId}, ${topicId}),
+      ('Maven Commands', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -416,18 +418,18 @@ const createLecturesForSubTopic10069 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10070 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10070 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Introduction to the Pet Store Project', ${topicIds}),
-      ('SDLC', ${topicIds}),
-      ('Agile Methodology', ${topicIds}),
-      ('Scrum', ${topicIds}),
-      ('Introduction to JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Introduction to the Pet Store Project', ${subTopicId}, ${topicId}),
+      ('SDLC', ${subTopicId}, ${topicId}),
+      ('Agile Methodology', ${subTopicId}, ${topicId}),
+      ('Scrum', ${subTopicId}, ${topicId}),
+      ('Introduction to JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -439,17 +441,17 @@ const createLecturesForSubTopic10070 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10071 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10071 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Download & Install Spring Tool 4', ${topicIds}),
-      ('Creating and Running Spring Boot Application using ST4 - Pet Store Project', ${topicIds}),
-      ('Introduction to Properties file and changing some default properties like application name, port, etc.', ${topicIds}),
-      ('Git Project Creation & Doing Initial Commit', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Download & Install Spring Tool 4', ${subTopicId}, ${topicId}),
+      ('Creating and Running Spring Boot Application using ST4 - Pet Store Project', ${subTopicId}, ${topicId}),
+      ('Introduction to Properties file and changing some default properties like application name, port, etc.', ${subTopicId}, ${topicId}),
+      ('Git Project Creation & Doing Initial Commit', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -461,20 +463,20 @@ const createLecturesForSubTopic10071 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10072 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10072 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('What is REST?', ${topicIds}),
-      ('Creating our First REST API', ${topicIds}),
-      ('Adding DevTools', ${topicIds}),
-      ('Creating Service file for Product Resource using in-memory data', ${topicIds}),
-      ('Creating Rest Controller CRUD Operations on Product Resource', ${topicIds}),
-      ('Consuming REST APIs using any Rest Client Library like postman, hoppscotch, etc.', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('What is REST?', ${subTopicId}, ${topicId}),
+      ('Creating our First REST API', ${subTopicId}, ${topicId}),
+      ('Adding DevTools', ${subTopicId}, ${topicId}),
+      ('Creating Service file for Product Resource using in-memory data', ${subTopicId}, ${topicId}),
+      ('Creating Rest Controller CRUD Operations on Product Resource', ${subTopicId}, ${topicId}),
+      ('Consuming REST APIs using any Rest Client Library like postman, hoppscotch, etc.', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -486,19 +488,19 @@ const createLecturesForSubTopic10072 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10073 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10073 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Adding spring boot starter validation dependency', ${topicIds}),
-      ('Add built-in validators to our User Resource Model', ${topicIds}),
-      ('Validating the Request using @Valid annotation', ${topicIds}),
-      ('Creating custom field validator for phoneNumber', ${topicIds}),
-      ('Create custom cross-field validator for password & confirmPassword', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Adding spring boot starter validation dependency', ${subTopicId}, ${topicId}),
+      ('Add built-in validators to our User Resource Model', ${subTopicId}, ${topicId}),
+      ('Validating the Request using @Valid annotation', ${subTopicId}, ${topicId}),
+      ('Creating custom field validator for phoneNumber', ${subTopicId}, ${topicId}),
+      ('Create custom cross-field validator for password & confirmPassword', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -510,22 +512,22 @@ const createLecturesForSubTopic10073 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10074 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10074 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Create database user & database', ${topicIds}),
-      ('Add mysql connector & spring jpa dependency in our Spring Application', ${topicIds}),
-      ('Adding mysql configuration details in application.properties file', ${topicIds}),
-      ('Convert Product model to Entity by using JPA annotations', ${topicIds}),
-      ('Create JPA repository for Product entity', ${topicIds}),
-      ('Modifying service file to use repository instead of in-memory data', ${topicIds}),
-      ('Defining Custom Query Methods in Repository', ${topicIds}),
-      ('JPA Auditing using @CreatedDate and @LastModifiedDate', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Create database user & database', ${subTopicId}, ${topicId}),
+      ('Add mysql connector & spring jpa dependency in our Spring Application', ${subTopicId}, ${topicId}),
+      ('Adding mysql configuration details in application.properties file', ${subTopicId}, ${topicId}),
+      ('Convert Product model to Entity by using JPA annotations', ${subTopicId}, ${topicId}),
+      ('Create JPA repository for Product entity', ${subTopicId}, ${topicId}),
+      ('Modifying service file to use repository instead of in-memory data', ${subTopicId}, ${topicId}),
+      ('Defining Custom Query Methods in Repository', ${subTopicId}, ${topicId}),
+      ('JPA Auditing using @CreatedDate and @LastModifiedDate', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -537,18 +539,18 @@ const createLecturesForSubTopic10074 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10075 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10075 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Add Spring Data REST Starter Dependency', ${topicIds}),
-      ('Remove not needed APIs from controllers', ${topicIds}),
-      ('Make necessary changes for validation', ${topicIds}),
-      ('Pagination & Sorting using PagingAndSortingRepository', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Add Spring Data REST Starter Dependency', ${subTopicId}, ${topicId}),
+      ('Remove not needed APIs from controllers', ${subTopicId}, ${topicId}),
+      ('Make necessary changes for validation', ${subTopicId}, ${topicId}),
+      ('Pagination & Sorting using PagingAndSortingRepository', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -560,19 +562,19 @@ const createLecturesForSubTopic10075 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10076 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10076 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Create OneToOne Mapping for User & Address', ${topicIds}),
-      ('Create OneToMany & ManyToOne Mapping for Category & Products', ${topicIds}),
-      ('Create ManyToMany Mapping for Orders & Products', ${topicIds}),
-      ('Consuming all the APIs with relationships', ${topicIds}),
-      ('Create Projections & Excerpts for necessary data', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Create OneToOne Mapping for User & Address', ${subTopicId}, ${topicId}),
+      ('Create OneToMany & ManyToOne Mapping for Category & Products', ${subTopicId}, ${topicId}),
+      ('Create ManyToMany Mapping for Orders & Products', ${subTopicId}, ${topicId}),
+      ('Consuming all the APIs with relationships', ${subTopicId}, ${topicId}),
+      ('Create Projections & Excerpts for necessary data', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -584,24 +586,24 @@ const createLecturesForSubTopic10076 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10077 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10077 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('What is Authentication & Authorization', ${topicIds}),
-      ('Add Spring Security Starter Dependency', ${topicIds}),
-      ('Authentication based on default security config', ${topicIds}),
-      ('Change default username and password', ${topicIds}),
-      ('Change default url configs using HttpSecurity', ${topicIds}),
-      ('Allow certain URLs based on http methods and url patterns', ${topicIds}),
-      ('Override default authentication manager by providing inMemoryAuthentication', ${topicIds}),
-      ('Add roles to the user', ${topicIds}),
-      ("Add security to particular URL based on user's role using hasRole() method", ${topicIds}),
-      ('Authorization using \@PreAuthorize, \@RolesAllowed or \@Secured', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('What is Authentication & Authorization', ${subTopicId}, ${topicId}),
+      ('Add Spring Security Starter Dependency', ${subTopicId}, ${topicId}),
+      ('Authentication based on default security config', ${subTopicId}, ${topicId}),
+      ('Change default username and password', ${subTopicId}, ${topicId}),
+      ('Change default url configs using HttpSecurity', ${subTopicId}, ${topicId}),
+      ('Allow certain URLs based on http methods and url patterns', ${subTopicId}, ${topicId}),
+      ('Override default authentication manager by providing inMemoryAuthentication', ${subTopicId}, ${topicId}),
+      ('Add roles to the user', ${subTopicId}, ${topicId}),
+      ("Add security to particular URL based on user's role using hasRole() method", ${subTopicId}, ${topicId}),
+      ('Authorization using \@PreAuthorize, \@RolesAllowed or \@Secured', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -614,19 +616,19 @@ const createLecturesForSubTopic10077 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10078 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10078 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('User Registration Flow', ${topicIds}),
-      ('Use UserDetails interface to implement User object', ${topicIds}),
-      ('Create custom MyUserDetailsService using UserDetailsService class and override loadUserByUsername method', ${topicIds}),
-      ('Add MyUserDetailsService object in security configuration for authentication', ${topicIds}),
-      ('Creating Login API', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('User Registration Flow', ${subTopicId}, ${topicId}),
+      ('Use UserDetails interface to implement User object', ${subTopicId}, ${topicId}),
+      ('Create custom MyUserDetailsService using UserDetailsService class and override loadUserByUsername method', ${subTopicId}, ${topicId}),
+      ('Add MyUserDetailsService object in security configuration for authentication', ${subTopicId}, ${topicId}),
+      ('Creating Login API', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -638,16 +640,16 @@ const createLecturesForSubTopic10078 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10079 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10079 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Create API to upload image for a product', ${topicIds}),
-      ('Create API to download image of a product', ${topicIds}),
-      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Create API to upload image for a product', ${subTopicId}, ${topicId}),
+      ('Create API to download image of a product', ${subTopicId}, ${topicId}),
+      ('Commit whatever is done to Git Project & mark tasks as Done in JIRA', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -659,16 +661,16 @@ const createLecturesForSubTopic10079 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10080 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10080 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Create simple frontend application using HTML, CSS and Javascript', ${topicIds}),
-      ('Consume Product APIs using fetch function', ${topicIds}),
-      ('Displaying fetched data in HTML page', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Create simple frontend application using HTML, CSS and Javascript', ${subTopicId}, ${topicId}),
+      ('Consume Product APIs using fetch function', ${subTopicId}, ${topicId}),
+      ('Displaying fetched data in HTML page', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -680,17 +682,17 @@ const createLecturesForSubTopic10080 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10081 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10081 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('The JUnit framework', ${topicIds}),
-      ('How to define a test in JUnit?', ${topicIds}),
-      ('Writing test case for the API', ${topicIds}),
-      ('Run your test from the command line', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('The JUnit framework', ${subTopicId}, ${topicId}),
+      ('How to define a test in JUnit?', ${subTopicId}, ${topicId}),
+      ('Writing test case for the API', ${subTopicId}, ${topicId}),
+      ('Run your test from the command line', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -702,15 +704,15 @@ const createLecturesForSubTopic10081 = async (topicIds) => {
   }
 }
 
-const createLecturesForSubTopic10082 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) 
+const createLecturesForSubTopic10082 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) 
   VALUES 
-      ('Creating jar file', ${topicIds}),
-      ('Using various environments using properties file', ${topicIds}),
-      ('Assignment', ${topicIds});`;
+      ('Creating jar file', ${subTopicId}, ${topicId}),
+      ('Using various environments using properties file', ${subTopicId}, ${topicId}),
+      ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {

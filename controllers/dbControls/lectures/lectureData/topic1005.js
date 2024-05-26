@@ -1,15 +1,17 @@
 const db = require("../../../../static/db.js");
 
-const createLecturesForSubTopic10041 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('What is Cloud Computing?', ${topicIds}),
-  ('Traditional IT structure vs Cloud Services', ${topicIds}),
-  ('Identity Access Management', ${topicIds}),
-  ('MFA Authentication', ${topicIds}),
-  ('AWS CloudShell Setup', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const topicId=1005;
 
-  const lectures = await db.query(`select * from lecture where subTopicId=${topicIds}`);
+const createLecturesForSubTopic10041 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('What is Cloud Computing?', ${subTopicId}, ${topicId}),
+  ('Traditional IT structure vs Cloud Services', ${subTopicId}, ${topicId}),
+  ('Identity Access Management', ${subTopicId}, ${topicId}),
+  ('MFA Authentication', ${subTopicId}, ${topicId}),
+  ('AWS CloudShell Setup', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
+
+  const lectures = await db.query(`select * from lecture where subTopicId=${subTopicId}`);
   if (lectures[0].length == 0) {
     try {
       await db.query(data);
@@ -20,17 +22,17 @@ const createLecturesForSubTopic10041 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10042 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Amazon Elastic Cloud Compute (EC2)', ${topicIds}),
-  ('Amazon EC2 Auto Scaling', ${topicIds}),
-  ('Amazon Lightsail', ${topicIds}),
-  ('AWS Elastic Beanstalk', ${topicIds}),
-  ('AWS Lambda', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10042 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Amazon Elastic Cloud Compute (EC2)', ${subTopicId}, ${topicId}),
+  ('Amazon EC2 Auto Scaling', ${subTopicId}, ${topicId}),
+  ('Amazon Lightsail', ${subTopicId}, ${topicId}),
+  ('AWS Elastic Beanstalk', ${subTopicId}, ${topicId}),
+  ('AWS Lambda', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -42,17 +44,17 @@ const createLecturesForSubTopic10042 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10043 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Amazon Elastic Block Store (EBS)', ${topicIds}),
-  ('Amazon Elastic File System (EFS)', ${topicIds}),
-  ('Amazon Simple Storage Service (S3)', ${topicIds}),
-  ('Amazon S3 Glacier', ${topicIds}),
-  ('Storage Gateway', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10043 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Amazon Elastic Block Store (EBS)', ${subTopicId}, ${topicId}),
+  ('Amazon Elastic File System (EFS)', ${subTopicId}, ${topicId}),
+  ('Amazon Simple Storage Service (S3)', ${subTopicId}, ${topicId}),
+  ('Amazon S3 Glacier', ${subTopicId}, ${topicId}),
+  ('Storage Gateway', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -64,16 +66,16 @@ const createLecturesForSubTopic10043 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10044 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('ELB Overview', ${topicIds}),
-  ('Classic Load Balancer (CLB)', ${topicIds}),
-  ('Application Load Balancer (ALB)', ${topicIds}),
-  ('Network Load Balancer (NLB)', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10044 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('ELB Overview', ${subTopicId}, ${topicId}),
+  ('Classic Load Balancer (CLB)', ${subTopicId}, ${topicId}),
+  ('Application Load Balancer (ALB)', ${subTopicId}, ${topicId}),
+  ('Network Load Balancer (NLB)', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -85,18 +87,18 @@ const createLecturesForSubTopic10044 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10045 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Amazon Databases Overview', ${topicIds}),
-  ('Amazon Aurora', ${topicIds}),
-  ('Amazon ElasticCache', ${topicIds}),
-  ('Amazon DynamoDB', ${topicIds}),
-  ('Amazon Relational Database Service (RDS)', ${topicIds}),
-  ('Amazon Neptune', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10045 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Amazon Databases Overview', ${subTopicId}, ${topicId}),
+  ('Amazon Aurora', ${subTopicId}, ${topicId}),
+  ('Amazon ElasticCache', ${subTopicId}, ${topicId}),
+  ('Amazon DynamoDB', ${subTopicId}, ${topicId}),
+  ('Amazon Relational Database Service (RDS)', ${subTopicId}, ${topicId}),
+  ('Amazon Neptune', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -108,15 +110,15 @@ const createLecturesForSubTopic10045 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10046 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Route53 Introduction', ${topicIds}),
-  ('Route53 as a Registrar', ${topicIds}),
-  ('Record Sets & Routing Policies', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10046 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Route53 Introduction', ${subTopicId}, ${topicId}),
+  ('Route53 as a Registrar', ${subTopicId}, ${topicId}),
+  ('Record Sets & Routing Policies', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -128,16 +130,16 @@ const createLecturesForSubTopic10046 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10047 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('CloudFormation', ${topicIds}),
-  ('Elastic BeanStalk', ${topicIds}),
-  ('CodeDeploy, CodeCommit, CodeBuild, CodePipeline, CodeArtifact', ${topicIds}),
-  ('Systems Manager (SSM)', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10047 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('CloudFormation', ${subTopicId}, ${topicId}),
+  ('Elastic BeanStalk', ${subTopicId}, ${topicId}),
+  ('CodeDeploy, CodeCommit, CodeBuild, CodePipeline, CodeArtifact', ${subTopicId}, ${topicId}),
+  ('Systems Manager (SSM)', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -149,18 +151,18 @@ const createLecturesForSubTopic10047 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10048 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Amazon API Gateway', ${topicIds}),
-  ('Amazon EventBridge', ${topicIds}),
-  ('Amazon Simple Notification Service (SNS)', ${topicIds}),
-  ('Amazon Simple Queue Service (SQS)', ${topicIds}),
-  ('Amazon MQ', ${topicIds}),
-  ('AWS Step Functions', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10048 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Amazon API Gateway', ${subTopicId}, ${topicId}),
+  ('Amazon EventBridge', ${subTopicId}, ${topicId}),
+  ('Amazon Simple Notification Service (SNS)', ${subTopicId}, ${topicId}),
+  ('Amazon Simple Queue Service (SQS)', ${subTopicId}, ${topicId}),
+  ('Amazon MQ', ${subTopicId}, ${topicId}),
+  ('AWS Step Functions', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -172,15 +174,15 @@ const createLecturesForSubTopic10048 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10049 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('CloudWatch', ${topicIds}),
-  ('CloudTrial', ${topicIds}),
-  ('CloudGuru', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10049 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('CloudWatch', ${subTopicId}, ${topicId}),
+  ('CloudTrial', ${subTopicId}, ${topicId}),
+  ('CloudGuru', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -192,14 +194,14 @@ const createLecturesForSubTopic10049 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10050 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Virtual Private Cloud (VPC)', ${topicIds}),
-  ('Security Groups & NACL', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10050 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Virtual Private Cloud (VPC)', ${subTopicId}, ${topicId}),
+  ('Security Groups & NACL', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -211,18 +213,18 @@ const createLecturesForSubTopic10050 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10051 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Encryption with KMS', ${topicIds}),
-  ('AWS Certificate Manager', ${topicIds}),
-  ('DDoS Protection: WAF & Shield', ${topicIds}),
-  ('Artifact and GuardDuty Overview', ${topicIds}),
-  ('Config Overview', ${topicIds}),
-  ('Security Hub and Root User Privileges', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10051 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Encryption with KMS', ${subTopicId}, ${topicId}),
+  ('AWS Certificate Manager', ${subTopicId}, ${topicId}),
+  ('DDoS Protection: WAF & Shield', ${subTopicId}, ${topicId}),
+  ('Artifact and GuardDuty Overview', ${subTopicId}, ${topicId}),
+  ('Config Overview', ${subTopicId}, ${topicId}),
+  ('Security Hub and Root User Privileges', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -234,17 +236,17 @@ const createLecturesForSubTopic10051 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10052 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Elastic Container Service (ECS)', ${topicIds}),
-  ('Elastic Kubernetes Service (EKS)', ${topicIds}),
-  ('CloudFront', ${topicIds}),
-  ('AWS Sagemaker', ${topicIds}),
-  ('AWS Sumerian', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10052 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Elastic Container Service (ECS)', ${subTopicId}, ${topicId}),
+  ('Elastic Kubernetes Service (EKS)', ${subTopicId}, ${topicId}),
+  ('CloudFront', ${subTopicId}, ${topicId}),
+  ('AWS Sagemaker', ${subTopicId}, ${topicId}),
+  ('AWS Sumerian', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {

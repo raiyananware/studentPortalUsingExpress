@@ -1,18 +1,19 @@
 const db =require("../../../../static/db.js")
 
+const topicId=1009
 
-const createLecturesForSubTopic10106 = async (topicIds) =>{
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Introduction to Stored Procedure', ${topicIds}),
-  ('Variables and datatypes', ${topicIds}),
-  ('Conditional Statement', ${topicIds}),
-  ('Assignment', ${topicIds}),
-  ('Looping Statement', ${topicIds}),
-  ('Stored Function', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10106 = async (subTopicId) =>{
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Introduction to Stored Procedure', ${subTopicId}, ${topicId}),
+  ('Variables and datatypes', ${subTopicId}, ${topicId}),
+  ('Conditional Statement', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId}),
+  ('Looping Statement', ${subTopicId}, ${topicId}),
+  ('Stored Function', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -24,14 +25,14 @@ const createLecturesForSubTopic10106 = async (topicIds) =>{
   }
 }
 
-const createLecturesForSubTopic10107 = async (topicIds) =>{
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Introduction to Cursor and Types of cursor', ${topicIds}),
-  ('Explicit Cursor', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10107 = async (subTopicId) =>{
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Introduction to Cursor and Types of cursor', ${subTopicId}, ${topicId}),
+  ('Explicit Cursor', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -43,17 +44,17 @@ const createLecturesForSubTopic10107 = async (topicIds) =>{
   }
 }
 
-const createLecturesForSubTopic10108 = async (topicIds) =>{
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Introduction to Triggers', ${topicIds}),
-  ('Row level Trigger', ${topicIds}),
-  ('Statement Level Trigger', ${topicIds}),
-  ('Before Trigger', ${topicIds}),
-  ('After Trigger', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10108 = async (subTopicId) =>{
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Introduction to Triggers', ${subTopicId}, ${topicId}),
+  ('Row level Trigger', ${subTopicId}, ${topicId}),
+  ('Statement Level Trigger', ${subTopicId}, ${topicId}),
+  ('Before Trigger', ${subTopicId}, ${topicId}),
+  ('After Trigger', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -65,22 +66,22 @@ const createLecturesForSubTopic10108 = async (topicIds) =>{
   }
 }
 
-const createLecturesForSubTopic10109 = async (topicIds) =>{
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Difference between SQL and NoSQL', ${topicIds}),
-  ('What is MongoDB?', ${topicIds}),
-  ('Installing MongoDB on local machine', ${topicIds}),
-  ('Data Types in MongoDB', ${topicIds}),
-  ('Using MongoDB Shell', ${topicIds}),
-  ('Perform CRUD Operations in MongoDB', ${topicIds}),
-  ('Finding Documents', ${topicIds}),
-  ('Using Projection to get required fields from collection', ${topicIds}),
-  ('Various MongoDB operators like $sort, $limit, $set, etc.', ${topicIds}),
-  ('Aggregates in MongoDB Queries', ${topicIds}),
-  ('Assignment', ${topicIds});`;
+const createLecturesForSubTopic10109 = async (subTopicId) =>{
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Difference between SQL and NoSQL', ${subTopicId}, ${topicId}),
+  ('What is MongoDB?', ${subTopicId}, ${topicId}),
+  ('Installing MongoDB on local machine', ${subTopicId}, ${topicId}),
+  ('Data Types in MongoDB', ${subTopicId}, ${topicId}),
+  ('Using MongoDB Shell', ${subTopicId}, ${topicId}),
+  ('Perform CRUD Operations in MongoDB', ${subTopicId}, ${topicId}),
+  ('Finding Documents', ${subTopicId}, ${topicId}),
+  ('Using Projection to get required fields from collection', ${subTopicId}, ${topicId}),
+  ('Various MongoDB operators like $sort, $limit, $set, etc.', ${subTopicId}, ${topicId}),
+  ('Aggregates in MongoDB Queries', ${subTopicId}, ${topicId}),
+  ('Assignment', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {

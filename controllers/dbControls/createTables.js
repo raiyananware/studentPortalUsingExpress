@@ -81,15 +81,17 @@ const creatingLectureTable =`CREATE TABLE IF NOT EXISTS lecture (
     lectureId INT AUTO_INCREMENT PRIMARY KEY,
     lectureName VARCHAR(256) NOT NULL,
     subTopicId INT,
-    FOREIGN KEY (subTopicId) REFERENCES subTopic(subTopicId) ON DELETE CASCADE
+    topicId INT,
+    FOREIGN KEY (subTopicId) REFERENCES subTopic(subTopicId) ON DELETE CASCADE,
+    FOREIGN KEY (topicId) REFERENCES topic(topicId) ON DELETE CASCADE
 );`
 
 const creatingSelfCompletedLectureTable =`CREATE TABLE IF NOT EXISTS selfCompletedLecture (
+    id int primary key,
     lectureId INT,
     subTopicId INT,
     topicId INT,
     studentId INT,
-    PRIMARY KEY (lectureId, studentId),
     FOREIGN KEY (lectureId) REFERENCES lecture(lectureId) ON DELETE CASCADE,
     FOREIGN KEY (subTopicId) REFERENCES subTopic(subTopicId) ON DELETE CASCADE,
     FOREIGN KEY (topicId) REFERENCES topic(topicId) ON DELETE CASCADE,
@@ -97,11 +99,11 @@ const creatingSelfCompletedLectureTable =`CREATE TABLE IF NOT EXISTS selfComplet
 );`
 
 const creatingClassLectureCompletedTable =`CREATE TABLE IF NOT EXISTS classLectureCompleted (
+    id int primary key,
     lectureId INT,
     subTopicId INT,
     topicId INT,
     batchId INT,
-    PRIMARY KEY (lectureId, batchId),
     FOREIGN KEY (lectureId) REFERENCES lecture(lectureId) ON DELETE CASCADE,
     FOREIGN KEY (subTopicId) REFERENCES subTopic(subTopicId) ON DELETE CASCADE,
     FOREIGN KEY (topicId) REFERENCES topic(topicId) ON DELETE CASCADE,

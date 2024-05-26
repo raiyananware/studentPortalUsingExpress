@@ -1,24 +1,24 @@
 const db =require("../../../../static/db.js")
 
-
-const createLecturesForSubTopic10010=async (topicIds)=>{
-const data=`INSERT INTO lecture (lectureName, subTopicId)
+const topicId=1002
+const createLecturesForSubTopic10010=async (subTopicId)=>{
+const data=`INSERT INTO lecture (lectureName, subTopicId, topicId)
 VALUES 
-('Client Server Architecture', ${topicIds}),
-('HTML Structure-Head,Body and HTML Version', ${topicIds}),
-('HTML Comments', ${topicIds}),
-('Page Information-title,meta,link,style, script', ${topicIds}),
-('HTML Tags and Attributes', ${topicIds}),
-('First Web page - Hello World', ${topicIds}),
-('Block Elements - Header tag, Paragraph tag', ${topicIds}),
-('Format tag - bold, strong, italics, em, underline, del, sub, sup', ${topicIds}),
-('Document structure - Div tag, Span tag', ${topicIds}),
-('anchor tag', ${topicIds}),
-('image tag', ${topicIds}),
-('List - Ordered, unordered, definition', ${topicIds}),
-('Assignment', ${topicIds});`
+('Client Server Architecture', ${subTopicId},${topicId}),
+('HTML Structure-Head,Body and HTML Version', ${subTopicId},${topicId}),
+('HTML Comments', ${subTopicId},${topicId}),
+('Page Information-title,meta,link,style, script', ${subTopicId},${topicId}),
+('HTML Tags and Attributes', ${subTopicId},${topicId}),
+('First Web page - Hello World', ${subTopicId},${topicId}),
+('Block Elements - Header tag, Paragraph tag', ${subTopicId},${topicId}),
+('Format tag - bold, strong, italics, em, underline, del, sub, sup', ${subTopicId},${topicId}),
+('Document structure - Div tag, Span tag', ${subTopicId},${topicId}),
+('anchor tag', ${subTopicId},${topicId}),
+('image tag', ${subTopicId},${topicId}),
+('List - Ordered, unordered, definition', ${subTopicId},${topicId}),
+('Assignment', ${subTopicId},${topicId});`
 
-const lectures= await db.query(`select * from lecture where subTopicId=${topicIds}`)
+const lectures= await db.query(`select * from lecture where subTopicId=${subTopicId}`)
 if(lectures[0].length==0){
 try {
     await db.query(data);
@@ -31,15 +31,15 @@ try {
 }
 
 
-const createLecturesForSubTopic10011=async (topicIds)=>{
-const data=`INSERT INTO lecture (lectureName, subTopicId)
+const createLecturesForSubTopic10011=async (subTopicId)=>{
+const data=`INSERT INTO lecture (lectureName, subTopicId, topicId)
 VALUES 
-('Table structure-tr,td,th,colspan and rowspan', ${topicIds}),
-('Form tag and Form Elements - Input type, textarea, select', ${topicIds}),
-('fieldset tag, legend tag', ${topicIds}),
-('Assignment', ${topicIds});`
+('Table structure-tr,td,th,colspan and rowspan', ${subTopicId},${topicId}),
+('Form tag and Form Elements - Input type, textarea, select', ${subTopicId},${topicId}),
+('fieldset tag, legend tag', ${subTopicId},${topicId}),
+('Assignment', ${subTopicId},${topicId});`
 
-const lectures= await db.query(`select * from lecture where subTopicId=${topicIds}`)
+const lectures= await db.query(`select * from lecture where subTopicId=${subTopicId}`)
 if(lectures[0].length==0){
 try {
     await db.query(data);
@@ -52,18 +52,18 @@ try {
 }
 
 
-const createLecturesForSubTopic10012=async (topicIds)=>{
-const data=`INSERT INTO lecture (lectureName, subTopicId)
+const createLecturesForSubTopic10012=async (subTopicId)=>{
+const data=`INSERT INTO lecture (lectureName, subTopicId, topicId)
 VALUES 
-('Need of CSS', ${topicIds}),
-('Types of CSS', ${topicIds}),
-('comments in CSS', ${topicIds}),
-('tag selector', ${topicIds}),
-('id selector', ${topicIds}),
-('class Selector', ${topicIds}),
-('Assignment', ${topicIds});`
+('Need of CSS', ${subTopicId},${topicId}),
+('Types of CSS', ${subTopicId},${topicId}),
+('comments in CSS', ${subTopicId},${topicId}),
+('tag selector', ${subTopicId},${topicId}),
+('id selector', ${subTopicId},${topicId}),
+('class Selector', ${subTopicId},${topicId}),
+('Assignment', ${subTopicId},${topicId});`
 
-const lectures= await db.query(`select * from lecture where subTopicId=${topicIds}`)
+const lectures= await db.query(`select * from lecture where subTopicId=${subTopicId}`)
 if(lectures[0].length==0){
 try {
     await db.query(data);
@@ -76,18 +76,18 @@ try {
 }
 
 
-const createLecturesForSubTopic10013=async (topicIds)=>{
-const data=`INSERT INTO lecture (lectureName, subTopicId)
+const createLecturesForSubTopic10013=async (subTopicId)=>{
+const data=`INSERT INTO lecture (lectureName, subTopicId, topicId)
 VALUES 
-('Color property', ${topicIds}),
-('Text property', ${topicIds}),
-('Font property', ${topicIds}),
-('box property (width and Height)', ${topicIds}),
-('Display Property', ${topicIds}),
-('Background- property', ${topicIds}),
-('Assignment', ${topicIds});`
+('Color property', ${subTopicId},${topicId}),
+('Text property', ${subTopicId},${topicId}),
+('Font property', ${subTopicId},${topicId}),
+('box property (width and Height)', ${subTopicId},${topicId}),
+('Display Property', ${subTopicId},${topicId}),
+('Background- property', ${subTopicId},${topicId}),
+('Assignment', ${subTopicId},${topicId});`
 
-const lectures= await db.query(`select * from lecture where subTopicId=${topicIds}`)
+const lectures= await db.query(`select * from lecture where subTopicId=${subTopicId}`)
 if(lectures[0].length==0){
 try {
     await db.query(data);
@@ -100,17 +100,17 @@ try {
 }
 
 
-const createLecturesForSubTopic10014=async (topicIds)=>{
-const data=`INSERT INTO lecture (lectureName, subTopicId)
+const createLecturesForSubTopic10014=async (subTopicId)=>{
+const data=`INSERT INTO lecture (lectureName, subTopicId, topicId)
 VALUES 
-('Introduction to Javascript', ${topicIds}),
-('Variables using var, let & const', ${topicIds}),
-('Functions in Javascript', ${topicIds}),
-('Conditional Statements', ${topicIds}),
-('Looping', ${topicIds}),
-('Assignment', ${topicIds});`
+('Introduction to Javascript', ${subTopicId},${topicId}),
+('Variables using var, let & const', ${subTopicId},${topicId}),
+('Functions in Javascript', ${subTopicId},${topicId}),
+('Conditional Statements', ${subTopicId},${topicId}),
+('Looping', ${subTopicId},${topicId}),
+('Assignment', ${subTopicId},${topicId});`
 
-const lectures= await db.query(`select * from lecture where subTopicId=${topicIds}`)
+const lectures= await db.query(`select * from lecture where subTopicId=${subTopicId}`)
 if(lectures[0].length==0){
 try {
     await db.query(data);
@@ -123,14 +123,14 @@ try {
 }
 
 
-const createLecturesForSubTopic10015=async (topicIds)=>{
-const data=`INSERT INTO lecture (lectureName, subTopicId)
+const createLecturesForSubTopic10015=async (subTopicId)=>{
+const data=`INSERT INTO lecture (lectureName, subTopicId, topicId)
 VALUES 
-('Working on fetch function', ${topicIds}),
-('Creating currency convertor by consuming API', ${topicIds}),
-('Assignment', ${topicIds});`
+('Working on fetch function', ${subTopicId},${topicId}),
+('Creating currency convertor by consuming API', ${subTopicId},${topicId}),
+('Assignment', ${subTopicId},${topicId});`
 
-const lectures= await db.query(`select * from lecture where subTopicId=${topicIds}`)
+const lectures= await db.query(`select * from lecture where subTopicId=${subTopicId}`)
 if(lectures[0].length==0){
 try {
     await db.query(data);

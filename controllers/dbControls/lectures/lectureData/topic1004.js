@@ -1,13 +1,15 @@
 const db = require("../../../../static/db.js");
 
-const createLecturesForSubTopic10037 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Resume Basics', ${topicIds}),
-  ('Writing Rules', ${topicIds}),
-  ('HR Friendly Resumes', ${topicIds});`;
+const topicId=1004;
+
+const createLecturesForSubTopic10037 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Resume Basics', ${subTopicId}, ${topicId}),
+  ('Writing Rules', ${subTopicId}, ${topicId}),
+  ('HR Friendly Resumes', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -19,17 +21,17 @@ const createLecturesForSubTopic10037 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10038 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Introduction to Web Portfolio', ${topicIds}),
-  ('Do not Start From Scratch', ${topicIds}),
-  ('Publishing to the Web', ${topicIds}),
-  ('Introduction to Video Resumes', ${topicIds}),
-  ('Profile Optimization and Networking on LinkedIn', ${topicIds}),
-  ('Showcasing Projects on Github', ${topicIds});`;
+const createLecturesForSubTopic10038 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Introduction to Web Portfolio', ${subTopicId}, ${topicId}),
+  ('Do not Start From Scratch', ${subTopicId}, ${topicId}),
+  ('Publishing to the Web', ${subTopicId}, ${topicId}),
+  ('Introduction to Video Resumes', ${subTopicId}, ${topicId}),
+  ('Profile Optimization and Networking on LinkedIn', ${subTopicId}, ${topicId}),
+  ('Showcasing Projects on Github', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -41,18 +43,18 @@ const createLecturesForSubTopic10038 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10039 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Common Interview Stages', ${topicIds}),
-  ('Communication Skills', ${topicIds}),
-  ('Popular Interview Questions', ${topicIds}),
-  ('Tricky Interview Questions', ${topicIds}),
-  ('Technical Interview Preparation', ${topicIds}),
-  ('Aptitude Test Overview', ${topicIds}),
-  ('Interview Day Checklist', ${topicIds});`;
+const createLecturesForSubTopic10039 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Common Interview Stages', ${subTopicId}, ${topicId}),
+  ('Communication Skills', ${subTopicId}, ${topicId}),
+  ('Popular Interview Questions', ${subTopicId}, ${topicId}),
+  ('Tricky Interview Questions', ${subTopicId}, ${topicId}),
+  ('Technical Interview Preparation', ${subTopicId}, ${topicId}),
+  ('Aptitude Test Overview', ${subTopicId}, ${topicId}),
+  ('Interview Day Checklist', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
@@ -64,14 +66,14 @@ const createLecturesForSubTopic10039 = async (topicIds) => {
   }
 };
 
-const createLecturesForSubTopic10040 = async (topicIds) => {
-  const data = `INSERT INTO lecture (lectureName, subTopicId) VALUES 
-  ('Job Search Resources', ${topicIds}),
-  ('Understanding Job Descriptions', ${topicIds}),
-  ('Company Research', ${topicIds});`;
+const createLecturesForSubTopic10040 = async (subTopicId) => {
+  const data = `INSERT INTO lecture (lectureName, subTopicId, topicId) VALUES 
+  ('Job Search Resources', ${subTopicId}, ${topicId}),
+  ('Understanding Job Descriptions', ${subTopicId}, ${topicId}),
+  ('Company Research', ${subTopicId}, ${topicId});`;
 
   const lectures = await db.query(
-    `select * from lecture where subTopicId=${topicIds}`,
+    `select * from lecture where subTopicId=${subTopicId}`,
   );
   if (lectures[0].length == 0) {
     try {
