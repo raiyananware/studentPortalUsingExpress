@@ -1,14 +1,18 @@
 const express = require("express");
 const router = express.Router();
+const user=require("../controllers/users/users.js")
+const {login}=require("../controllers/users/login.js")
 const{authenticateToken}=require("../commonFunction/decryptJwt.js")
-const userFunctions=require("../controllers/users/methods.js")
 
 
-router.route("/login").post(userFunctions.login)
-router.route("/createUser").post(authenticateToken,userFunctions.createUser)
-router.route("/:userId?").get(authenticateToken, userFunctions.getUser)
-router.route("/updateUser/:userId").put(authenticateToken, userFunctions.updateUser)
-router.route("/:userId/active").put(authenticateToken,userFunctions.activateUser)
-router.route("/:userId/deactivate").put(authenticateToken,userFunctions.deactivateUser)
+router.route("/login").post(login)
+router.route("/:userId?").get(authenticateToken, user.getUser)
+router.route("/createUser").post(authenticateToken, user.createUser)
+router.route("/:userId/activate").put(authenticateToken, user.activateUser)
+router.route("/updateUser/:userId").put(authenticateToken, user.updateUser)
+router.route("/:userId/deactivate").put(authenticateToken, user.deactivateUser)
+router.route("/qualification").put(authenticateToken, user.updateQualification)
+router.route("/jobLocations").put(authenticateToken, user.updateJobLocations)
+router.route("/workExperience").put(authenticateToken, user.updateWorkExperience)
 
 module.exports = router;

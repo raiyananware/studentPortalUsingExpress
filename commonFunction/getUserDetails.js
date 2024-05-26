@@ -4,7 +4,6 @@ const getUserDetailsByEmail = async  (username)=> {
   const data = await db.query(
     `select * from user where username='${username}'`,
   );
-  console.log(data)
   return data[0][0];
 }
 
